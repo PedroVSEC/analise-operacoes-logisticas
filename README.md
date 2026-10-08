@@ -16,7 +16,7 @@ A administração não sabia se estes três problemas estavam relacionados. Dois
 - **Os atrasos e o excesso de stock estão provavelmente ligados.** Perante entregas pouco fiáveis, encomenda-se mais e mais cedo por precaução, e o stock acumula.
 - **A queda de margem não pode ser confirmada sem os dados de 2024**, mas dentro de 2025 o mix deslocou-se para as duas famílias de menor margem, que passaram de 23,4% para 43,8% da receita entre o primeiro e o quarto trimestre.
 
-![Cumprimento de prazo por centro](visuais/otd-por-centro.png.png)
+![Cumprimento de prazo por centro](visuais/otdporcentro.png)
 
 *O Centro Lisboa entrega a horas em 14,9% dos casos, contra 65,7% do Centro Norte.*
 
