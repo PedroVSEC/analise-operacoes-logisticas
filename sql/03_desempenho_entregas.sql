@@ -186,7 +186,6 @@ with linhas_validas as (select * from linhas l
 -- Pergunta 8
 -- ---------------------------------------------------------------------
 
--- NOTA: nao copiei as CTEs neste exercicio mas estao no sql
     select c. regiao, round(100.0*sum(case WHEN d_prometida>= d_entrega then 1 else 0 end)/COUNT(d_entrega),2) as tx_globalOTD
     from entregas_validas ev
    join clientes c on c. id_cliente=ev. id_cliente
