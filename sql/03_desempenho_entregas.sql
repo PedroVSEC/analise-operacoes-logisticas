@@ -179,7 +179,19 @@ with linhas_validas as (select * from linhas l
     group by c. id_centro
     
 
--- NOTA: nao ha uma correlacao direta. O centro de lisboa e o que emprega mais trabalhadores e tem o pior desempenho de entrega enquanto o centro norte e o Segundo centro com mais trabalhadores e é o que apresenta melhor desempenho. Se compararmos o centro sul com o centro centro percebemos que apesar do centro centro ter 22 trabalhadores e o centro sul ter 15 os seus desempenhos sao semelhantes
+/* NOTA
+   Nao ha relacao entre numero de operadores e desempenho de entrega.
+   Lisboa tem 28 operadores (o segundo maior) e o pior OTD (14,9%);
+   o Norte tem 42 e o melhor (65,7%).
+
+   O argumento decisivo e a carga por operador: Lisboa tem a mais baixa
+   dos quatro centros (3,57 encomendas e 11,07 linhas por operador) e
+   mesmo assim o pior resultado, enquanto Coimbra processa 4,68 encomendas
+   por operador e entrega tres vezes melhor.
+
+   Se o problema fosse capacidade, Lisboa seria o melhor centro.
+   A causa esta no processo, nao nos recursos.
+*/
 
 
 -- ---------------------------------------------------------------------
