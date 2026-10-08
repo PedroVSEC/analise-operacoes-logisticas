@@ -40,4 +40,4 @@ O problema agrava-se com o crescimento: o quarto trimestre foi o de maior fatura
 - Foram excluídos quatro registos por inconsistências de data ou de cliente, com impacto de 0,9% na faturação total.
 - O custo de posse de stock é uma estimativa por intervalo, não um valor apurado.
 - A atribuição da queda de margem permanece por confirmar até haver dados do exercício anterior.
-- Os gráficos foram produzidos em Power BI com uma limpeza ligeiramente diferente (três encomendas com datas em formato inválido foram excluídas em vez de corrigidas). As taxas nos gráficos diferem por isso até 0,7 pontos percentuais das apresentadas neste texto, sem alterar nenhuma conclusão.
+
