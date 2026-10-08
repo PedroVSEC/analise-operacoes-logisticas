@@ -33,10 +33,17 @@ case when data_entrega like '%/%' then SUBSTR(data_entrega,7,4) || '-' || SUBSTR
 sum(case when data_entrega<data_encomenda then 1 else 0 end)
 from encomendas
 
--- NOTA: depois de converter as datas, sobram apenas 2 registos impossiveis (antes eram 6).
--- NOTA: os outros 4 eram falsos positivos: em formato DD/MM/YYYY a comparacao de texto
--- NOTA: e alfabetica e nao cronologica. Corrigir o formato antes de testar coerencias
--- NOTA: logicas e essencial, caso contrario um problema mascara-se noutro.
+/* NOTA
+   Depois de converter as datas sobram apenas 2 registos impossiveis;
+   antes da conversao apareciam 6.
+
+   Os outros 4 eram falsos positivos: em formato DD/MM/YYYY a comparacao
+   de texto e alfabetica e nao cronologica ('13/01/2025' < '2025-01-03'
+   porque '1' < '2').
+
+   Corrigir o formato antes de testar coerencias logicas e essencial,
+   caso contrario um problema mascara-se noutro.
+*/
 
 
 -- ---------------------------------------------------------------------
