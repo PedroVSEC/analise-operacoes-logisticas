@@ -46,7 +46,7 @@ SELECT l. id_linha, l. id_produto
 from linhas l 
 left join produtos p on p. id_produto=l. id_produto
 where p.id_produto is null
--- NOTA: corrigir se for possivel atraves da descricao e sku perceber de que produto se trata. Caso nao se consiga recuperar, excluir
+-- NOTA: nao e recuperavel, a tabela linhas so tem o id_produto. Manter no valor total faturado (a venda existiu) e excluir das analises por produto.
 
 
 -- ---------------------------------------------------------------------
@@ -56,7 +56,7 @@ where p.id_produto is null
 SELECT id_encomenda, id_cliente
 from encomendas 
 where id_cliente not in (select id_cliente from clientes)
--- NOTA: processo semelhante ao
+-- NOTA: mesmo tratamento do caso anterior: manter no total faturado e excluir das analises por cliente.
 
 
 -- ---------------------------------------------------------------------
@@ -76,7 +76,7 @@ where data_entrega not like '%/%' and data_entrega<data_encomenda
 SELECT id_encomenda, data_prometida, data_encomenda
 from encomendas 
 where data_prometida not like '%/%' and data_prometida<data_encomenda
--- NOTA: semelhante ao
+-- NOTA: mesma decisao da verificacao 6: excluir das analises de prazo, por ser logicamente impossivel.
 
 
 -- ---------------------------------------------------------------------
